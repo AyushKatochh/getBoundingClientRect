@@ -1,0 +1,16 @@
+#outerBox{
+  height: 300px;
+  width: 800px;
+  outline: 1px solid block;
+  background-color: grey;
+  margin-left: 332px;
+}
+
+#box{
+  position: relative;
+  height: 50px;
+  width: 50px;
+  outline: 1px solid block;
+  background-color: green;
+  position: relative;
+}

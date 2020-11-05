@@ -1,0 +1,53 @@
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Moving box</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id= "outerBox">
+  <div id = "box"></div>
+</div>
+<script>
+    var o = document.getElementById("outerBox");
+    var d = document.getElementById("box");
+    let direction = "right";
+    let position = 0;
+    let positionDown = 0;
+    let positionLeft = 0;
+    let positionTop = 0;
+    const left = setInterval(() => {
+        
+        if(direction=="right" ){
+        d.style.left = position + "px";
+        position +=50
+
+        if (
+          d.getBoundingClientRect().right >=
+          o.getBoundingClientRect().right
+    
+        ) {
+          direction="down";
+          let positionDown = 0;
+          
+        } 
+        } else if(direction == "down"){
+          d.style.top = positionDown + "px";
+          positionDown +=50
+
+          
+          if (
+            d.getBoundingClientRect().bottom >=
+            o.getBoundingClientRect().bottom
+          ) {
+             direction="left";
+          }
+        } 
+      
+    }, 500);
+
+  
+
+</script>
+</body>
+</head>
